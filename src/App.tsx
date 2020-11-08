@@ -1,16 +1,21 @@
 import React from 'react';
-import './App.css';
-import NavBar from './components/NavBar';
+import { Router, Link } from '@reach/router';
+import NavBar from './components/NavBar/NavBar';
+import Home from './views/Home';
+import Portfolio from './views/Portfolio';
+import Contact from './views/Contact';
+import NotFound from './views/NotFound';
 
 function App() {
 	return (
 		<div>
 			<NavBar />
-			<div className="App">
-				<header className="App-header">
-					<p>Hi my name is Ahmed Jeylani. I am a full stack developer</p>
-				</header>
-			</div>
+			<Router>
+				<Home path="/" />
+				<Portfolio path="portfolio" />
+				<Contact path="contact" />
+				<NotFound default />
+			</Router>
 		</div>
 	);
 }

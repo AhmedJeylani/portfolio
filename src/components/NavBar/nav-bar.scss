@@ -1,0 +1,75 @@
+@import '../../resources/variables';
+
+.nav {
+	text-align: end;
+	background: $background-dark;
+	color: white;
+	padding: 10px 0;
+	font-weight: bold;
+
+	.nav-container {
+		display: flex;
+		justify-content: space-between;
+	}
+	.heading {
+		padding-left: 10px;
+		align-self: center;
+	}
+
+	.nav-items {
+		padding-right: 10px;
+		list-style: none;
+		text-align: center;
+
+		@media (max-width: 768px) {
+			display: none;
+		}
+
+		li {
+			display: inline;
+		}
+	}
+
+	.burger-menu {
+		position: absolute;
+		width: 100%;
+		@media (min-width: 769px) {
+			display: none;
+		}
+		.burger-items {
+			list-style: none;
+			text-align: end;
+			margin: 0;
+			padding: 0;
+		}
+
+		.item-link {
+		}
+	}
+
+	.nav-link {
+		color: white;
+		text-decoration: none;
+		padding: 25px 15px;
+		background: none;
+	}
+
+	.nav-link:hover {
+		color: $primary;
+		border-bottom: solid $primary;
+		border-width: 3px;
+	}
+
+	.nav-link-contact {
+		color: white;
+		text-decoration: none;
+		background-color: $primary;
+		padding: 10px 30px;
+		border-radius: 30px;
+		margin-left: 10px;
+	}
+
+	.nav-link-contact:hover {
+		background: #32267e;
+	}
+}
