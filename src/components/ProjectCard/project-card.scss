@@ -1,0 +1,49 @@
+@import '../../resources/variables';
+
+.project-card {
+	background: $background-dark;
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	height: 250px;
+	border-radius: 32px;
+	padding: 25px;
+
+	h2 {
+		margin: 5px 0;
+	}
+
+	p {
+		position: relative;
+		flex-grow: 1;
+		line-height: 1.7;
+		overflow: hidden;
+		max-height: 10rem;
+		background-color: $background-dark;
+	}
+
+	img {
+		margin-right: 10px;
+		height: 35px;
+	}
+
+	.explore-hover {
+		position: absolute;
+		border-radius: 32px;
+		display: flex;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $primary;
+		justify-content: center;
+		align-items: center;
+
+		.button-link {
+			height: fit-content;
+			background: none;
+			border: solid 2px white;
+			cursor: pointer;
+		}
+	}
+}

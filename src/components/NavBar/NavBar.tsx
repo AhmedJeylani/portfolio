@@ -1,5 +1,7 @@
 import React, { Component, useState } from 'react';
 import './nav-bar.scss';
+import Logo from '../../resources/logo.svg';
+import whiteMenu from '../../resources/white-menu.svg';
 import NavItems from './NavItems';
 import { Link } from '@reach/router';
 
@@ -13,7 +15,7 @@ function NavBar() {
 		<div className="nav">
 			<div className="container">
 				<div className="nav-container">
-					<p className="heading"> Logo </p>
+					<img src={Logo} />
 					<ul className="nav-items">
 						{NavItems.map((item, index) => {
 							return (
@@ -33,13 +35,17 @@ function NavBar() {
 						})}
 					</ul>
 					<div className="burger-menu">
-						<button onClick={showBuggerMenu}>=</button>
+						<button className="burger-button" onClick={showBuggerMenu}>
+							<img src={whiteMenu} />
+						</button>
 						{open && (
 							<ul className="burger-items">
 								{NavItems.map((item, index) => {
 									return (
 										<li key={index}>
-											<Link to={item.url}>{item.title}</Link>
+											<Link className="links" to={item.url}>
+												{item.title}
+											</Link>
 										</li>
 									);
 								})}
